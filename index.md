@@ -1,5 +1,26 @@
 # 啊哈，域名
 
+www.example.com真正的域名是www.example.com.root，简写为www.example.com.。因为，根域名.root对于所有域名都是一样的，所以平时是省略的。
+
+根域名的下一级，叫做”顶级域名”（top-level domain，缩写为TLD），比如.com、.net；再下一级叫做”次级域名”（second-level domain，缩写为SLD），比如www.example.com里面的.example，这一级域名是用户可以注册的；再下一级是主机名（host），比如www.example.com里面的www，又称为"三级域名"，这是用户在自己的域里面为服务器分配的名称，是用户可以任意分配的。
+
+总结一下，域名的层级结构如下。
+
+主机名.次级域名.顶级域名.根域名
+host.sld.tld.root
+
+> A记录域名解析
+
+A记录域名解析又称IP指向，您可以设置子域名并指向到自己的目标主机IP上，从而实现通过域名找到指定IP。应用型负载均衡ALB默认对外提供公网IP访问，如需通过域名访问主机，可以配置A记录域名解析，具体实现方案如下图所示：
+
+![image](https://user-images.githubusercontent.com/101488791/164894754-6e69b71a-ba11-4624-837c-94ed71314a90.png)
+
+> CNAME域名解析
+
+CNAME域名解析又称别名解析，您可以设置子域名并指向到其他域名，从而实现将一个域名指向另一个域名。应用型负载均衡ALB默认对外提供域名访问，如果通过其他域名访问请配置CNAME域名解析，具体实现方案如下图所示：
+
+![image](https://user-images.githubusercontent.com/101488791/164894738-bdc3f87d-1287-40cf-8f2e-9f3a6adc7066.png)
+
 ## [深入理解内容分发网络 CDN](https://hexingxing.cn/deep-understanding-of-content-delivery-network-cdn/)
 
 ![image](https://user-images.githubusercontent.com/101488791/158043621-7519167b-fab4-4dfd-a638-b24fab539edf.png)
