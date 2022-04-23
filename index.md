@@ -9,6 +9,8 @@ www.example.com真正的域名是www.example.com.root，简写为www.example.com
 主机名.次级域名.顶级域名.根域名
 host.sld.tld.root
 
+[设置CNAME域名解析](https://help.aliyun.com/document_detail/205660.html)
+
 > A记录域名解析
 
 A记录域名解析又称IP指向，您可以设置子域名并指向到自己的目标主机IP上，从而实现通过域名找到指定IP。应用型负载均衡ALB默认对外提供公网IP访问，如需通过域名访问主机，可以配置A记录域名解析，具体实现方案如下图所示：
